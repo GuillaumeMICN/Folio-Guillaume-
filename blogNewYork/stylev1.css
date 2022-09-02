@@ -1,0 +1,681 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+
+
+
+html, body{
+    
+    margin: 0 auto;
+}
+
+.menu{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    height: 100px;
+    background-color: #3f5f9f;
+    align-items :center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+}
+
+.logo{
+    margin-left:20px;
+}
+
+
+.m-right{
+    display: flex;
+    margin-right: 100px; 
+    text-decoration: none;
+    justify-content: space-around;
+    
+}
+
+
+.m-right a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    align-self: center;
+    text-align: center;
+}
+
+
+
+
+/* photo principale*/
+
+.photo{
+    background-image: url(images/vue-panoramique-new-york.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 25% 25%;
+    height: 600px;
+    margin-top: -50px;
+}
+
+.photo p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    padding-top: 400px;
+}
+
+
+.Qui{
+    font-family:'Roboto', sans-serif;
+    font-size: 35px;
+    color: #060d64;
+    text-align: center; 
+    
+}
+.CV{
+    
+    display: flex;
+    justify-content: center;
+}
+.CV a{
+    display: flex;
+    font-size: 15px;
+    color: white;
+    align-self: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background-color:#47b664 ;
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+/* ce qu'il faut savoir */
+h2{
+    
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 35px;
+    color: #060d64;
+    text-align: center;
+
+}
+
+.savoir p{
+    color: grey;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* conseils*/
+.MyGrid{
+    
+    display: flex;
+    height: 1020px;
+    display: grid;
+    grid-template-columns: [first] 150px [line2] 150px [linebis] auto [line3] 20px [col4-start] 100px [five] auto [six] 150px [end];
+    grid-template-rows: [row1-start] 200px [row1-end] 200px [second-line] 200px [third-line] 20px [line4] 200px [line5] 200px [last-line];
+}
+
+
+.item-a{
+    background-color: #48888e;
+    grid-column-start: 2;
+    grid-column-end: line3;
+    grid-row-start: 1;
+    grid-row-end:second-line ;
+    display: flex;
+    border-radius: 20px;
+    
+   
+}
+
+.item-b{
+    background-color: #3d5da1;
+    grid-column-start: col4-start;
+    grid-column-end: 7;
+    grid-row-start: row1-end;
+    grid-row-end: third-line;
+    display: flex;
+    border-radius: 20px;
+    
+    
+}
+
+.item-c{
+    background-color: #47b664;
+    grid-column-start: linebis;
+    grid-column-end: five;
+    grid-row-start: line4;
+    grid-row-end: last-line;
+    display: flex;
+    border-radius: 20px;
+   
+    
+}
+
+.item-a .photoA{
+    height: 100%;
+    width: 100%;
+    background-image: url(images/Brooklyn-Bridge-in-New-York.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px 0px 0px 20px;
+    
+}
+
+.item-b .photoB{
+    height: 100%;
+    width: 100%;
+    background-image: url(images/guestblogger-newyorknl-north-america-usa-newyork-times-square-yellow-cab-medium.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0px 20px 20px 0px;
+   
+
+}
+
+.item-c .photoC{
+    height: 100%;
+    width: 100%;
+    background-image: url(images/aerial-view-beautiful-central-park-manhattan-new-york_181624-39710.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px 0px 0px 20px;
+}
+
+h4{
+    font-size: 30px;
+   
+}
+
+.text{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: #ffffff;
+    margin: 30px;
+   
+}
+.text a {
+    text-decoration: none;
+    color: #ffffff; 
+}
+
+
+/* format tablette*/
+@media screen and (max-width: 1024px){
+    .MyGrid{
+    
+    display: grid;
+    height :1260px;
+    grid-template-columns: [first] 150px [line2] 150px [linebis] auto [line3] 20px [col4-start] 100px [five] auto [six] 150px [end];
+    grid-template-rows: [row1-start] 200px [row1-end] 200px [second-line] 20px [secondbis] 200px [third-line] 20px [line4] 200px [line5] 20px [line6] 400px [last-line];
+    flex-direction: column;
+    }
+        .item-a{
+            grid-column-start: 2;
+            grid-column-end: 7;
+            grid-row-start: 1;
+            grid-row-end: second-line;
+        }
+        .item-b{
+            grid-column-start: 2;
+            grid-column-end: 7;
+            grid-row-start: secondbis;
+            grid-row-end: line5;
+        }
+        .item-c{
+            grid-column-start: 2;
+            grid-column-end: 7;
+            grid-row-start: line6;
+            grid-row-end: last-line;
+
+        }
+        .fondTransport{
+            display: flex;
+            height: 500px;
+            width: 100%;
+            justify-content: baseline;
+        }
+        .text1{
+            align-self: center;
+            
+        }
+        .metro{
+            overflow: hidden;
+            display: none;
+            visibility: hidden;
+            
+        }
+        .container{
+            display: flex;
+            background-color: yellow;
+            height: 1000px;
+            width: auto;
+        }
+        
+        .dormir{
+            display: flex;
+            height: 600px;
+            width: 100%;
+            
+        }
+        .textDormir{
+            font-size: auto;
+        }
+        .photoHotel{
+            position: absolute;
+            left: -999em;
+            display: none;
+        }
+             
+        
+}
+
+
+
+
+
+/* transport */
+
+.fondTransport {
+    
+    background: rgb(0,212,255);
+    background: linear-gradient(90deg, rgba(0,212,255,1) 8%, rgba(46,112,216,1) 33%, rgba(60,95,204,1) 64%, rgba(14,43,134,1) 90%);
+    display: flex;
+    height: 400px;
+    width: 100%;
+    
+}
+
+.text1 h3{
+    font-size: 50px;
+    color: white;
+}
+
+.text1{
+    font-size: 'Roboto' , sans-serif;
+    flex-direction: column;
+    margin: 0px 10px 10px 30px;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    display: flex; 
+}
+
+.text1 a{
+    align-self: flex-start;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border: solid;
+    border-color: white;
+}
+.metro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+
+
+/* Mes articles*/
+
+.container{
+    display: flex;
+    background-color: #D3D3D3;
+    height: auto;
+    width: 100%;
+    justify-content: space-around;
+    
+    flex-wrap: wrap;
+    gap: 30px;
+    
+}
+
+.Art1{
+    flex-direction: column;
+    display: flex;
+    height: 500px;
+    width: 400px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 12px #555;
+    transition: all 0.5s ease;
+      
+}
+
+
+a .Art1:hover{
+    background-color: #48888e;
+    transform: scale(1.1);
+    color: white;
+  
+}
+.Art2:hover:hover{
+    background-color: #48888e;
+    transform: scale(1.1);
+}
+.Art3:hover:hover{
+    background-color: #48888e;
+    transform: scale(1.1);
+}
+.Art4:hover:hover{
+    background-color: #48888e;
+    transform: scale(1.1);
+}
+
+.Art2{
+    margin-top: 50px;
+    flex-direction: column;
+    display: flex;
+    height: 500px;
+    width: 400px;
+    background-color: white;
+    border-radius: 10px;
+    align-content: flex-end;
+    box-shadow: 1px 1px 12px #555;
+    transition: all 0.5s ease;  
+}
+.Art3{
+    flex-direction: column;
+    display: flex;
+    height: 500px;
+    width: 400px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 12px #555;
+    transition: all 0.5s ease;  
+}
+.Art4{
+    margin-top: 50px;
+    flex-direction: column;
+    display: flex;
+    height: 500px;
+    width: 400px;
+    background-color: white;
+    border-radius: 10px;
+    align-self: flex-start;
+    box-shadow: 1px 1px 12px #555;
+    transition: all 0.5s ease;  
+}
+
+.titre{
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    color: blue;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+}
+
+.container a{
+    text-decoration: none;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+}
+.btn a{
+    color: white;
+    align-self: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background-color:#47b664 ;
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+
+/* btn*/
+/*.Art1 a{
+    text-align: center;
+    text-decoration :none;
+    font-size: 15px;
+    
+}
+.Art2 a{
+    text-align: center;
+    text-decoration :none;
+    font-size: 15px;
+}
+.Art3 a{
+    text-align: center;
+    text-decoration :none;
+    font-size: 15px;
+}
+.Art4 a{
+    text-align: center;
+    text-decoration :none;
+    font-size: 15px;
+}*/
+
+
+/* photos articles*/
+.Art1 .photo1{
+    height :300px;
+    width: 100%;
+    background-image: url(images/taureau-wall-street.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.Art2 .photo2{
+    height :300px;
+    width: 100%;
+    background-image: url(images/siege-Nations-unies-New-York_0.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px 10px 0px 0px;
+}
+.Art3 .photo3{
+    height :300px;
+    width: 100%;
+    background-image: url(images/Chinatown.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px 10px 0px 0px;
+}
+.Art4 .photo4{
+    height :300px;
+    width: 100%;
+    background-image: url(images/New_York_City-770x385.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px 10px 0px 0px;
+}
+
+
+/*ou dormir à NYC ?*/
+
+.dormir{
+    display: flex;
+    height: 600px;
+    width: 100%;
+    
+    
+}
+
+.photoHotel{
+    display: flex;
+    height: 600px;
+    width: 55%;
+    background-color: powderblue;
+    background-image: url(images/City-Guide-New-York-Hotel-Sister-City-Hotel-Boutique-Hotel-Ace-Atelier-Architecture.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.textDormir{
+    
+    align-items: center;
+    font-size: 23px;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    height: auto;
+    width: 45%;
+    color:#060d64 ;
+    margin-left: 20px;
+    
+}
+b{
+    font-size: 30px;
+}
+.textDormir p{
+    height: 600px; 
+}
+
+
+
+
+/*footer*/
+
+footer{
+    display: flex;
+    height: 800px;
+    width: 100%;
+    background-color: #3d5da1;
+    justify-content: flex-start;
+   flex-direction: column;
+}
+
+
+
+.photoFooter{
+    display: flex;
+    height: 300px;
+    width: 100%;
+    background-color: gold;
+
+}
+.photoF1{
+    display: flex;
+    height: 300px;
+    width: 25%;
+    background-color: aliceblue;
+    background-image: url(images/Working-and-Living-in-New-York.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.photoF2{
+    display: flex;
+    height: 300px;
+    width: 25%;
+    background-color: firebrick;
+    background-image: url(images/1558469-new-york-luciano-mortula-lgm-shutterstock-original.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.photoF3{
+    display: flex;
+    height: 300px;
+    width: 25%;
+    background-color: rgb(166, 201, 71);
+    background-image: url(images/Hudson-Yards-Vessel-in-New-York.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.photoF4{
+    display: flex;
+    height: 300px;
+    width: 25%;
+    background-color: rgb(214, 86, 176);
+    background-image: url(images/images.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.containerFooter{
+    margin-top: 60px;
+    display: flex;
+    color: white;
+    justify-content: space-around;
+
+
+}
+.ArticlesRécents{
+    
+    text-align: center;
+
+}
+h5{
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+.ArticlesRécents a{
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+.LiensUtiles a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.Réseaux{
+    display: flex;
+    height: 80px;
+    width: 200px;
+    justify-content: space-around;
+    
+}
+.facebook a{
+    display: flex;
+    height: 55px;
+    width: 30px;
+    background-image: url(images/facebook.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.instagram a{
+    display: flex;
+    height: 55px;
+    width: 55px;
+    background-image: url(images/instagram.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.twitter a{
+    display: flex;
+    height: 55px;
+    width: 55px;
+    background-image: url(images/twitter.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
